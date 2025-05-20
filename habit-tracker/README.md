@@ -10,12 +10,6 @@ Track, manage, and build better habits — one day at a time.
 ## Overview
 The Habit Tracker is a web application designed to help users track their habits in a clean and minimalist interface. The application allows users to add new habits, view their progress, and manage their habit history.
 
-## Features
-- Add new habits through a user-friendly form.
-- View active habits displayed as cards.
-- Responsive design that works on both desktop and mobile devices.
-- Future integration of JavaScript for dynamic functionality.
-
 ## Project Structure
 ```
 habit-tracker
@@ -27,11 +21,6 @@ habit-tracker
 │       └── app.js        # JavaScript logic for handling habits (to be implemented)
 ├── README.md             # Project documentation
 ```
-
-## Setup Instructions
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Open `src/index.html` in your web browser to view the application.
 
 ## Goals
 - To provide a simple and effective way for users to track their habits.
@@ -91,13 +80,8 @@ Responsive animations and user onboarding
 }
 
 You’ll need:
-
 A form with an input for habit name.
-
 A container to display the habit cards.
-
 A submit event listener.
-
 A renderHabits() function.
-
 Optionally, save/load from local storage.

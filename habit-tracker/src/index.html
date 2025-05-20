@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
     <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title">Habit Tracker</h1>
+    <header class="navbar">
+        <div class="navbar__container">
+            <h1 class="navbar__title">Habit Tracker</h1>
+        </div>
     </header>
     <main class="main">
-        <section class="habit-form">
-            <h2 class="habit-form__title">Add a New Habit</h2>
-            <form class="habit-form__form">
-                <input type="text" class="habit-form__input" placeholder="Enter your habit" required>
-                <button type="submit" class="habit-form__button">Add Habit</button>
+        <section class="add-habit">
+            <form class="add-habit__form" autocomplete="off">
+                <input 
+                    type="text" 
+                    class="add-habit__input" 
+                    placeholder="Add a new habit (e.g. Read, Workout, Meditate)" 
+                    required
+                >
+                <button type="submit" class="add-habit__button">Add</button>
             </form>
         </section>
-        <section class="habit-list">
-            <h2 class="habit-list__title">Your Habits</h2>
-            <div class="habit-list__container">
-                <!-- Habit cards will be dynamically rendered here -->
+        <section class="section-card">
+            <div class="section-card__header">
+                <span class="section-card__icon">✅</span>
+                <h2 class="habits__title">Your Habits</h2>
+            </div>
+            <hr class="section-card__divider">
+            <div class="habits__list">
+                <!-- Habit cards rendered here -->
             </div>
         </section>
-        <section class="historical-habits">
-            <h2 class="historical-habits__title">Deleted Habits</h2>
-            <div class="historical-habits__container">
-                <!-- Deleted habits will be displayed here -->
+        <section class="section-card section-card--deleted">
+            <div class="section-card__header">
+                <span class="section-card__icon">🗑️</span>
+                <h2 class="history__title">Deleted Habits</h2>
+            </div>
+            <hr class="section-card__divider">
+            <div class="history__list">
+                <!-- Deleted habits rendered here -->
             </div>
         </section>
     </main>
