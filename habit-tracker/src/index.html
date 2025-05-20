@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Habit Tracker</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Habit Tracker</h1>
+    </header>
+    <main class="main">
+        <section class="habit-form">
+            <h2 class="habit-form__title">Add a New Habit</h2>
+            <form class="habit-form__form">
+                <input type="text" class="habit-form__input" placeholder="Enter your habit" required>
+                <button type="submit" class="habit-form__button">Add Habit</button>
+            </form>
+        </section>
+        <section class="habit-list">
+            <h2 class="habit-list__title">Your Habits</h2>
+            <div class="habit-list__container">
+                <!-- Habit cards will be dynamically rendered here -->
+            </div>
+        </section>
+        <section class="historical-habits">
+            <h2 class="historical-habits__title">Deleted Habits</h2>
+            <div class="historical-habits__container">
+                <!-- Deleted habits will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
