@@ -7,8 +7,17 @@ Track, manage, and build better habits — one day at a time.
 
 # Habit Tracker
 
-## Overview
-The Habit Tracker is a web application designed to help users track their habits in a clean and minimalist interface. The application allows users to add new habits, view their progress, and manage their habit history.
+## 📌 Overview
+
+This Habit Tracker is a simple web app that allows users to:
+- Add new habits
+- Track daily completion streaks
+- Store progress persistently using **LocalStorage**
+- Visualize habits with responsive habit cards
+
+It’s built with **vanilla JavaScript**, **HTML5**, and **modern CSS**, with a focus on solid logic, beginner-friendly architecture, and clean UI.
+
+---
 
 ## Project Structure
 ```
@@ -26,18 +35,6 @@ habit-tracker
 - To provide a simple and effective way for users to track their habits.
 - To implement features such as habit statistics and reminders in future updates.
 - To maintain a clean and modern UI that enhances user experience.
-
-## 📌 Overview
-
-This Habit Tracker is a simple web app that allows users to:
-- Add new habits
-- Track daily completion streaks
-- Store progress persistently using **LocalStorage**
-- Visualize habits with responsive habit cards
-
-It’s built with **vanilla JavaScript**, **HTML5**, and **modern CSS**, with a focus on solid logic, beginner-friendly architecture, and clean UI.
-
----
 
 ## 🚀 Features
 
