@@ -66,6 +66,22 @@ Sort/filter by streak, date, or name
 
 Responsive animations and user onboarding
 
+
+🧠 Next Steps
+Build the ability to submit a new habit name (string) and push it into the habits array as an object with default values (streak: 0, completedToday: false, etc), then render it to the UI.
+
+You’ll need:
+
+A form with an input for habit name.
+
+A container to display the habit cards.
+
+A submit event listener.
+
+A renderHabits() function.
+
+Optionally, save/load from local storage.rage.
+
 ## 🧪 Example Habit Object
 
 ```js
@@ -75,10 +91,3 @@ Responsive animations and user onboarding
   lastCompleted: "2025-04-27",
   completedToday: false
 }
-
-You’ll need:
-A form with an input for habit name.
-A container to display the habit cards.
-A submit event listener.
-A renderHabits() function.
-Optionally, save/load from local storage.
