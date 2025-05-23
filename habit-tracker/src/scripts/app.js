@@ -124,7 +124,7 @@ function addToCompleted(){
         completedTodayDiv.textContent = completedHabitArray[i].completedToday;
 
         completedCard.append(completedNameDiv, completedStreakDiv, lastCompletedDiv, completedTodayDiv);
-        completedList.append(completedCard);
+        completedList.append(completedCard);    
     }
 }
 
@@ -158,7 +158,6 @@ function renderDeleted(){
         reAddBtn.textContent = '✓'; // This will look clean and centered  
 
         reAddBtn.addEventListener('click', function(){
-            deletedList.innerHTML = '';
             const habitToRestore = deletedHabitArray[i];
             deletedHabitArray.splice(i, 1);
             habitArray.push(habitToRestore);
@@ -166,6 +165,7 @@ function renderDeleted(){
             console.log(JSON.stringify(habitArray));
             renderUi();
             addToCompleted();
+            renderDeleted();
         });
 
 
