@@ -5,9 +5,10 @@ const deletedCard = document.querySelector('.section-card--deleted');
 const input = document.querySelector('.add-habit__input');
 const list = document.querySelector('.habits__list');
 const completedList = document.querySelector('.history__list');
+const deletedList = document.querySelector('.deleted-history__list');
 const habitArray = [];
 const completedHabitArray = [];
-
+const deletedHabitArray = [];
 
 //Handles the event to push the habit to the array
 habitForm.addEventListener('submit', function(e){
@@ -53,11 +54,18 @@ function renderUi(){
         completedTodayDiv.className = 'habit-card__completedToday';
         completedTodayDiv.textContent = habitArray[i].completedToday
         
-
+        
         const completedBtn = document.createElement('button');
         completedBtn.className = 'habit-card__complete-btn';
         completedBtn.textContent = '✓'; // This will look clean and centered
-        card.append(nameDiv, streakDiv, lastCompletedDiv, completedTodayDiv, completedBtn);
+
+
+        const deletedBtn = document.createElement('button');
+        deletedBtn.textContent = 'X'; 
+        deletedBtn.className = 'habit-card__delete-btn';
+
+
+        card.append(nameDiv, streakDiv, lastCompletedDiv, completedTodayDiv, completedBtn, deletedBtn);
         list.append(card);
 
         completedBtn.addEventListener('click', function () {
@@ -70,8 +78,21 @@ function renderUi(){
             console.log(JSON.stringify(completedHabitArray));
             renderUi();
             addToCompleted();
+            renderDeleted();
         });
+    
         
+
+        deletedBtn.addEventListener('click', function(){
+            deletedHabitArray.push(habitArray[i]);
+            habitArray.splice(i, 1);
+            console.log('Deleted Habit array');
+            console.log(JSON.stringify(deletedHabitArray));
+            console.log('Pushed to deleted habit array');
+            renderUi();
+            renderDeleted();
+            // addToCompleted(); Want to make a function here that adds it back to the your habits section.
+        });
     
     }
 }
@@ -107,8 +128,51 @@ function addToCompleted(){
     }
 }
 
-function moveToDeleted(){
+function renderDeleted(){
+        deletedList.innerHTML = ""; // Clear the list before rendering
+    for (let i = 0; i < deletedHabitArray.length; i++){
+        const deletedCard = document.createElement('div');
+        deletedCard.className = 'habit-card'; 
+    
+        const deletedNameDiv = document.createElement('div');
+        deletedNameDiv.className = 'habit-card__name';
+        deletedNameDiv.textContent = deletedHabitArray[i].name;
 
+
+        const deletedStreakDiv = document.createElement('div');
+        deletedStreakDiv.className = 'habit-card__streak';
+        deletedStreakDiv.textContent = deletedHabitArray[i].streak;
+        
+
+        const deletedLastCompletedDiv = document.createElement('div');
+        deletedLastCompletedDiv.className = 'habit-card__lastCompleted';
+        deletedLastCompletedDiv.textContent = deletedHabitArray[i].lastCompleted;
+      
+
+        const deletedCompletedTodayDiv = document.createElement('div');
+        deletedCompletedTodayDiv.className = 'habit-card__completedToday';
+        deletedCompletedTodayDiv.textContent = deletedHabitArray[i].completedToday
+
+        const reAddBtn = document.createElement('button');
+        reAddBtn.className = 'habit-card__complete-btn';
+        reAddBtn.textContent = '✓'; // This will look clean and centered  
+
+        reAddBtn.addEventListener('click', function(){
+            deletedList.innerHTML = '';
+            const habitToRestore = deletedHabitArray[i];
+            deletedHabitArray.splice(i, 1);
+            habitArray.push(habitToRestore);
+            console.log('Added back to active habits array');
+            console.log(JSON.stringify(habitArray));
+            renderUi();
+            addToCompleted();
+        });
+
+
+
+        deletedCard.append(deletedNameDiv, deletedStreakDiv, deletedLastCompletedDiv, deletedCompletedTodayDiv, reAddBtn);
+        deletedList.append(deletedCard);
+    }
 }
 
 // =====================
