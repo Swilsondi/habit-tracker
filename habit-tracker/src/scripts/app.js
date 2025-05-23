@@ -4,39 +4,106 @@ const habitCard = document.querySelector('.section-card');
 const deletedCard = document.querySelector('.section-card--deleted');
 const input = document.querySelector('.add-habit__input');
 const list = document.querySelector('.habits__list');
+const completedList = document.querySelector('.history__list');
 const habitArray = [];
-const currentDate = new Date(); // Returns the current date and time
+const completedHabitArray = [];
+
 
 //Handles the event to push the habit to the array
-addBtn.addEventListener('click', function(e){
+habitForm.addEventListener('submit', function(e){
     e.preventDefault();
-    const inputValue = input.value;   
+    const inputValue = input.value;  
+    const isoDate = new Date().toISOString().split('T')[0]; // e.g., "2025-05-22"
     const habitObj = {
         name: inputValue,
-        streak: 0,
-        lastCompleted: currentDate,
+        streak: 1,
+        lastCompleted: isoDate,
         completedToday: true
     };
 
     habitArray.push(habitObj);
-TODO: //Currently the habit array is displaying as object: object instead of the objects data im trying to set in habitObj
-TODO: //I think I can wrap it in a function and call it in this function to seperate the behaviors for better modularity.
-    console.log(`Habit added ${habitArray}`);
+    console.log(habitObj);
     input.value = "";
     renderUi();
 });
 
-TODO: //Add the other object fields into the rendered display. Make sure it's updating the DOM correctly. 
-
 //Renders the display to show the added habit card
 function renderUi(){
-    input.value = ""; 
+    list.innerHTML = ""; // Clear the list before rendering
     for (let i = 0; i < habitArray.length; i++){
         const card = document.createElement('div');
-        card.className = '.habits__list';
-        const li = document.createElement('li');
-        li.innerHTML = `<li>${habitArray[i].value}</li>`;
-        card.append(li);
+        card.className = 'habit-card'; // Corrected class assignment no dot. But why doesn't this have a dot?
+    
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'habit-card__name';
+        nameDiv.textContent = habitArray[i].name;
+
+
+        const streakDiv = document.createElement('div');
+        streakDiv.className = 'habit-card__streak';
+        streakDiv.textContent = habitArray[i].streak;
+        
+
+        const lastCompletedDiv = document.createElement('div');
+        lastCompletedDiv.className = 'habit-card__lastCompleted';
+        lastCompletedDiv.textContent = habitArray[i].lastCompleted;
+      
+
+        const completedTodayDiv = document.createElement('div');
+        completedTodayDiv.className = 'habit-card__completedToday';
+        completedTodayDiv.textContent = habitArray[i].completedToday
+        
+
+        const completedBtn = document.createElement('button');
+        completedBtn.className = 'habit-card__complete-btn';
+        completedBtn.textContent = '✓'; // This will look clean and centered
+        card.append(nameDiv, streakDiv, lastCompletedDiv, completedTodayDiv, completedBtn);
+        list.append(card);
+
+        completedBtn.addEventListener('click', function () {
+            completedHabitArray.push(habitArray[i]);
+            habitArray.splice(i, 1);
+            console.log('Habit array');
+            console.log(JSON.stringify(habitArray));
+            console.log('Pushed to completed habit array');
+            console.log('Completed habits array'); 
+            console.log(JSON.stringify(completedHabitArray));
+            renderUi();
+            addToCompleted();
+        });
+        
+    
+    }
+}
+
+
+function addToCompleted(){
+    completedList.innerHTML = ""; // Clear the list before rendering
+    for (let i = 0; i < completedHabitArray.length; i++){
+
+        const completedCard = document.createElement('div');
+        completedCard.className = 'habit-card'; 
+        
+
+        const completedNameDiv = document.createElement('div');
+        completedNameDiv.className = 'habit-card__name';
+        completedNameDiv.textContent = completedHabitArray[i].name;
+
+
+        const completedStreakDiv = document.createElement('div');
+        completedStreakDiv.className = 'habit-card__streak';
+        completedStreakDiv.textContent = completedHabitArray[i].streak;
+
+        const lastCompletedDiv = document.createElement('div');
+        lastCompletedDiv.className = 'habit-card__info';
+        lastCompletedDiv.textContent = completedHabitArray[i].lastCompleted;
+        
+        const completedTodayDiv = document.createElement('div');
+        completedTodayDiv.className = 'habit-card__info';
+        completedTodayDiv.textContent = completedHabitArray[i].completedToday;
+
+        completedCard.append(completedNameDiv, completedStreakDiv, lastCompletedDiv, completedTodayDiv);
+        completedList.append(completedCard);
     }
 }
 
@@ -47,27 +114,28 @@ function moveToDeleted(){
 // =====================
 // TODOs & FIXES
 // =====================
-// 1. Fix how habits are rendered in renderUi():
-//    - Currently, you're creating <li> elements with habitArray[i].value, but habit objects don't have a 'value' property.
-//    - Use habitArray[i].name, habitArray[i].streak, etc. to display correct data.
-//    - Also, don't set card.className = '.habits__list'; Instead, use 'habit-card' for each card and append to the .habits__list container.
+//  Modular Functions
+//    - As your app grows, split logic into smaller functions: addHabit, renderUi, deleteHabit, completeHabit, etc.
 //
-// 2. Clear the habits__list container before re-rendering in renderUi() to avoid duplicate cards.
+//  Next Steps
+//    - Add "Complete" and "Delete" buttons to each habit card, and attach event listeners to them.
+//    - Implement moveToDeleted() to move habits to the deleted section.
+//    - Save and load habits from localStorage for persistence.
+//    - Format/display the date (lastCompleted) in a user-friendly way.
 //
-// 3. Use habitForm's submit event instead of the button's click event for better accessibility.
+// =====================
+// COMMON TRIPPING POINTS EXPLAINED
+// =====================
 //
-// 4. When logging habitArray, use console.log(habitArray) or JSON.stringify(habitArray) to see the actual objects, not [object Object].
-//
-// 5. Add logic to mark habits as completed, increment streak, and update lastCompleted.
-//
-// 6. Implement moveToDeleted() to move habits to the deleted section.
-//
-// 7. Save and load habits from localStorage for persistence.
-//
-// 8. Add event listeners to dynamically created buttons (complete/delete) in each habit card.
-//
-// 9. Improve modularity by splitting logic into smaller functions (addHabit, renderUi, deleteHabit, etc.).
-//
-// 10. Format/display the date (lastCompleted) in a user-friendly way.
-//
+// - Only input, textarea, and select elements have a .value property. Use .value for form fields, .innerHTML or .textContent for divs/spans.
+// 
+// - When you want the current date/time, always use `new Date()` at the moment you need it, not once at the top.
+// 
+// - When rendering lists, always clear the container first with .innerHTML = "" to avoid duplicates.
+// 
+// - Use className = 'classname' (no dot) when assigning classes in JS.
+// 
+// - Use JSON.stringify(obj) to turn an object into a string (for storage or readable logs), but for debugging in the console, just use console.log(obj).
+// 
+// - Don't nest <li> inside <li>. Use <div> or <span> for custom card layouts.
 // =====================
