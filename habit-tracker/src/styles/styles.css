@@ -184,9 +184,9 @@ a {
     box-shadow: 0 2px 12px 0 rgba(99,102,241,0.08);
     padding: 1.25rem 1rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
     border-left: 5px solid var(--color-accent-strong);
     transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
     position: relative;
@@ -213,10 +213,10 @@ a {
 }
 
 .habit-card__info {
-    flex: 1;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.2em;
 }
 
 .habit-card__name {
@@ -236,8 +236,26 @@ a {
 
 .habit-card__actions {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-end;
+    margin-left: 1rem;
+}
+
+/* Add this at the end or near your habit card styles */
+.habit-card__label {
+    font-size: 0.78rem;
+    color: var(--color-muted, #6b7280);
+    font-weight: 600;
+    margin-bottom: 0.15em;
+    margin-top: 0.5em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.habit-card__label:first-child {
+    margin-top: 0;
 }
 
 /* Style for the "Complete" button on each habit card */
