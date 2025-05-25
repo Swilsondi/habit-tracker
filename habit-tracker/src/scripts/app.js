@@ -109,7 +109,7 @@ function addToCompleted(){
 
         const completedCard = document.createElement('div');
         completedCard.className = 'habit-card'; 
-        
+
 
         const completedNameDiv = document.createElement('div');
         completedNameDiv.className = 'habit-card__name';
@@ -123,7 +123,7 @@ function addToCompleted(){
         const lastCompletedDiv = document.createElement('div');
         lastCompletedDiv.className = 'habit-card__info';
         lastCompletedDiv.textContent = completedHabitArray[i].lastCompleted;
-        
+
         const completedTodayDiv = document.createElement('div');
         completedTodayDiv.className = 'habit-card__info';
         completedTodayDiv.textContent = completedHabitArray[i].completedToday;
@@ -134,11 +134,11 @@ function addToCompleted(){
 }
 
 function renderDeleted(){
-        deletedList.innerHTML = ""; // Clear the list before rendering
+    deletedList.innerHTML = ""; // Clear the list before rendering
     for (let i = 0; i < deletedHabitArray.length; i++){
         const deletedCard = document.createElement('div');
         deletedCard.className = 'habit-card'; 
-    
+
         const deletedNameDiv = document.createElement('div');
         deletedNameDiv.className = 'habit-card__name';
         deletedNameDiv.textContent = deletedHabitArray[i].name;
@@ -147,12 +147,12 @@ function renderDeleted(){
         const deletedStreakDiv = document.createElement('div');
         deletedStreakDiv.className = 'habit-card__streak';
         deletedStreakDiv.textContent = deletedHabitArray[i].streak;
-        
+
 
         const deletedLastCompletedDiv = document.createElement('div');
         deletedLastCompletedDiv.className = 'habit-card__lastCompleted';
         deletedLastCompletedDiv.textContent = deletedHabitArray[i].lastCompleted;
-      
+
 
         const deletedCompletedTodayDiv = document.createElement('div');
         deletedCompletedTodayDiv.className = 'habit-card__completedToday';
