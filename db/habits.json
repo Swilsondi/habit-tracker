@@ -1,0 +1,358 @@
+[
+  {
+    "id": 1,
+    "name": "Drink Water",
+    "streak": 24,
+    "lastCompleted": "2025-05-18",
+    "completedToday": false
+  },
+  {
+    "id": 2,
+    "name": "Read 10 Pages",
+    "streak": 11,
+    "lastCompleted": "2025-05-01",
+    "completedToday": true
+  },
+  {
+    "id": 3,
+    "name": "Exercise",
+    "streak": 21,
+    "lastCompleted": "2025-05-11",
+    "completedToday": true
+  },
+  {
+    "id": 4,
+    "name": "Meditate",
+    "streak": 8,
+    "lastCompleted": "2025-05-12",
+    "completedToday": true
+  },
+  {
+    "id": 5,
+    "name": "Journal",
+    "streak": 8,
+    "lastCompleted": "2025-05-02",
+    "completedToday": true
+  },
+  {
+    "id": 6,
+    "name": "Walk 5,000 Steps",
+    "streak": 30,
+    "lastCompleted": "2025-05-22",
+    "completedToday": true
+  },
+  {
+    "id": 7,
+    "name": "Sleep 8 Hours",
+    "streak": 6,
+    "lastCompleted": "2025-05-16",
+    "completedToday": true
+  },
+  {
+    "id": 8,
+    "name": "Eat Fruit",
+    "streak": 19,
+    "lastCompleted": "2025-05-15",
+    "completedToday": true
+  },
+  {
+    "id": 9,
+    "name": "No Sugar",
+    "streak": 14,
+    "lastCompleted": "2025-05-12",
+    "completedToday": false
+  },
+  {
+    "id": 10,
+    "name": "Stretch",
+    "streak": 26,
+    "lastCompleted": "2025-05-09",
+    "completedToday": true
+  },
+  {
+    "id": 11,
+    "name": "Practice Coding",
+    "streak": 25,
+    "lastCompleted": "2025-05-20",
+    "completedToday": true
+  },
+  {
+    "id": 12,
+    "name": "Write a Gratitude",
+    "streak": 20,
+    "lastCompleted": "2025-05-22",
+    "completedToday": false
+  },
+  {
+    "id": 13,
+    "name": "Plan Tomorrow",
+    "streak": 16,
+    "lastCompleted": "2025-05-08",
+    "completedToday": false
+  },
+  {
+    "id": 14,
+    "name": "Call Family",
+    "streak": 25,
+    "lastCompleted": "2025-05-17",
+    "completedToday": true
+  },
+  {
+    "id": 15,
+    "name": "Clean Room",
+    "streak": 2,
+    "lastCompleted": "2025-05-01",
+    "completedToday": false
+  },
+  {
+    "id": 16,
+    "name": "Cook Meal",
+    "streak": 9,
+    "lastCompleted": "2025-05-21",
+    "completedToday": true
+  },
+  {
+    "id": 17,
+    "name": "No Fast Food",
+    "streak": 22,
+    "lastCompleted": "2025-05-15",
+    "completedToday": false
+  },
+  {
+    "id": 18,
+    "name": "Save Money",
+    "streak": 28,
+    "lastCompleted": "2025-05-07",
+    "completedToday": true
+  },
+  {
+    "id": 19,
+    "name": "Study Language",
+    "streak": 3,
+    "lastCompleted": "2025-05-10",
+    "completedToday": false
+  },
+  {
+    "id": 20,
+    "name": "Listen to Podcast",
+    "streak": 30,
+    "lastCompleted": "2025-05-20",
+    "completedToday": false
+  },
+  {
+    "id": 21,
+    "name": "Draw",
+    "streak": 1,
+    "lastCompleted": "2025-05-05",
+    "completedToday": false
+  },
+  {
+    "id": 22,
+    "name": "Yoga",
+    "streak": 7,
+    "lastCompleted": "2025-05-10",
+    "completedToday": false
+  },
+  {
+    "id": 23,
+    "name": "Read News",
+    "streak": 12,
+    "lastCompleted": "2025-05-22",
+    "completedToday": true
+  },
+  {
+    "id": 24,
+    "name": "No Social Media",
+    "streak": 16,
+    "lastCompleted": "2025-05-13",
+    "completedToday": false
+  },
+  {
+    "id": 25,
+    "name": "Take Vitamins",
+    "streak": 29,
+    "lastCompleted": "2025-05-22",
+    "completedToday": true
+  },
+  {
+    "id": 26,
+    "name": "Go Outside",
+    "streak": 11,
+    "lastCompleted": "2025-05-04",
+    "completedToday": false
+  },
+  {
+    "id": 27,
+    "name": "Declutter Desk",
+    "streak": 11,
+    "lastCompleted": "2025-05-09",
+    "completedToday": true
+  },
+  {
+    "id": 28,
+    "name": "Practice Instrument",
+    "streak": 19,
+    "lastCompleted": "2025-05-19",
+    "completedToday": false
+  },
+  {
+    "id": 29,
+    "name": "Review Goals",
+    "streak": 7,
+    "lastCompleted": "2025-05-21",
+    "completedToday": true
+  },
+  {
+    "id": 30,
+    "name": "Drink Tea",
+    "streak": 23,
+    "lastCompleted": "2025-05-05",
+    "completedToday": false
+  },
+  {
+    "id": 31,
+    "name": "No Soda",
+    "streak": 29,
+    "lastCompleted": "2025-05-07",
+    "completedToday": true
+  },
+  {
+    "id": 32,
+    "name": "Compliment Someone",
+    "streak": 13,
+    "lastCompleted": "2025-05-21",
+    "completedToday": true
+  },
+  {
+    "id": 33,
+    "name": "Smile",
+    "streak": 10,
+    "lastCompleted": "2025-05-05",
+    "completedToday": false
+  },
+  {
+    "id": 34,
+    "name": "Do Pushups",
+    "streak": 22,
+    "lastCompleted": "2025-05-08",
+    "completedToday": false
+  },
+  {
+    "id": 35,
+    "name": "Floss",
+    "streak": 10,
+    "lastCompleted": "2025-05-23",
+    "completedToday": true
+  },
+  {
+    "id": 36,
+    "name": "Make Bed",
+    "streak": 27,
+    "lastCompleted": "2025-05-12",
+    "completedToday": true
+  },
+  {
+    "id": 37,
+    "name": "Track Expenses",
+    "streak": 18,
+    "lastCompleted": "2025-05-16",
+    "completedToday": true
+  },
+  {
+    "id": 38,
+    "name": "Meal Prep",
+    "streak": 18,
+    "lastCompleted": "2025-05-20",
+    "completedToday": false
+  },
+  {
+    "id": 39,
+    "name": "No TV",
+    "streak": 26,
+    "lastCompleted": "2025-05-11",
+    "completedToday": false
+  },
+  {
+    "id": 40,
+    "name": "Read Email",
+    "streak": 4,
+    "lastCompleted": "2025-05-08",
+    "completedToday": true
+  },
+  {
+    "id": 41,
+    "name": "Organize Files",
+    "streak": 8,
+    "lastCompleted": "2025-05-15",
+    "completedToday": false
+  },
+  {
+    "id": 42,
+    "name": "Water Plants",
+    "streak": 2,
+    "lastCompleted": "2025-05-24",
+    "completedToday": true
+  },
+  {
+    "id": 43,
+    "name": "No Snacks",
+    "streak": 6,
+    "lastCompleted": "2025-05-12",
+    "completedToday": false
+  },
+  {
+    "id": 44,
+    "name": "Take a Walk",
+    "streak": 13,
+    "lastCompleted": "2025-05-13",
+    "completedToday": true
+  },
+  {
+    "id": 45,
+    "name": "Reflect",
+    "streak": 25,
+    "lastCompleted": "2025-05-20",
+    "completedToday": false
+  },
+  {
+    "id": 46,
+    "name": "No Complaints",
+    "streak": 12,
+    "lastCompleted": "2025-05-15",
+    "completedToday": true
+  },
+  {
+    "id": 47,
+    "name": "Help Someone",
+    "streak": 16,
+    "lastCompleted": "2025-05-17",
+    "completedToday": false
+  },
+  {
+    "id": 48,
+    "name": "Do Laundry",
+    "streak": 28,
+    "lastCompleted": "2025-05-22",
+    "completedToday": false
+  },
+  {
+    "id": 49,
+    "name": "No Caffeine",
+    "streak": 25,
+    "lastCompleted": "2025-05-02",
+    "completedToday": true
+  },
+  {
+    "id": 50,
+    "name": "Early Wake Up",
+    "streak": 1,
+    "lastCompleted": "2025-05-09",
+    "completedToday": false
+  },
+  {
+    "id": 51,
+    "streak": 1,
+    "lastCompleted": "2025-05-26",
+    "completedToday": true
+  }
+]
